@@ -5,25 +5,32 @@ body {
     font-weight: bold;
     color: white;
     text-align: center;
+    display: flex; /* Center content horizontally and vertically */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
 }
 
 h1 {
     color: goldenrod;
+    font-size: 3rem; /* Make the heading larger */
 }
 
 #message-el {
     font-style: italic;
+    font-size: 1.5rem; /* Increase font size */
 }
 
 button {
     color: #016f32;
-    width: 150px;
+    width: 200px; /* Increase button width */
     background: goldenrod;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 15px 0; /* Increase vertical padding */
     font-weight: bold;
+    font-size: 1.2rem; /* Increase font size */
     border: none;
-    border-radius: 2px;
-    margin-bottom: 2px;
-    margin-top: 2px;
+    border-radius: 5px; /* Slightly rounder corners */
+    margin: 10px 0; /* Add vertical spacing between buttons */
 }

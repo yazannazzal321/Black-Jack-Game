@@ -1,9 +1,9 @@
 let player = {
-    name: "Per",
+    name: "Yazan",
     chips: 200
 }
 
-let cards = []
+let playerCards = []
 let sum = 0
 let hasBlackJack = false
 let isAlive = false
@@ -30,15 +30,15 @@ function startGame() {
     isAlive = true
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
-    cards = [firstCard, secondCard]
+    playerCards = [firstCard, secondCard]
     sum = firstCard + secondCard
     renderGame()
 }
 
 function renderGame() {
     cardsEl.textContent = "Cards: "
-    for (let i = 0; i < cards.length; i++) {
-        cardsEl.textContent += cards[i] + " "
+    for (let i = 0; i < playerCards.length; i++) {
+        cardsEl.textContent += playerCards[i] + " "
     }
     
     sumEl.textContent = "Sum: " + sum
@@ -59,7 +59,7 @@ function newCard() {
     if (isAlive === true && hasBlackJack === false) {
         let card = getRandomCard()
         sum += card
-        cards.push(card)
+        playerCards.push(card)
         renderGame()        
     }
 }
